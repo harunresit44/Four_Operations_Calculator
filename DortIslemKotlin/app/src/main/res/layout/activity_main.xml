@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/ilkSayi"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="21dp"
+        android:ems="10"
+        android:hint="İlk sayıyı giriniz"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/ikinciSayi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/ikinciSayi"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:hint="ikinci sayıyı giriniz"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ilkSayi" />
+
+    <TextView
+        android:id="@+id/sonucText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="253dp"
+        android:text="Result:"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="222dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="34dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/sonucText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ikinciSayi">
+
+        <Button
+            android:id="@+id/toplaButton"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:onClick="topla"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/cikarButton"
+            android:layout_width="53dp"
+            android:layout_height="wrap_content"
+            android:onClick="cikar"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/bolButton"
+            android:layout_width="52dp"
+            android:layout_height="wrap_content"
+            android:onClick="bol"
+            android:text="/" />
+
+        <Button
+            android:id="@+id/carpButton"
+            android:layout_width="47dp"
+            android:layout_height="wrap_content"
+            android:onClick="carp"
+            android:text="*" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
